@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Register{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="username">Username</label>
+    <input name="username" id="username" required> <!-- SECURITY FEATURE: Browser will not submit the form until those fields are filled in. To do: for older browsers that don't support that attribute, or if they are using something besides a browser to make requests, you still want to validate the data in the Flask view--> 
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required> 
+    <input type="submit" value="Register">
+  </form>
+{% endblock %}

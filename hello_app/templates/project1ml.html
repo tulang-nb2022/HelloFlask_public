@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h1>{% block title %}Project 1 / Unsupervised learning: k-means clustering {% endblock %}</h1>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 / Unsupervised learning: k-means clustering </title>
+{% endblock %}
+
+{% block content %}
+
+  <p> k-means clustering is an iterative, centroid-based clustering algorithm adept at isolating patterns in a variety of data science applications, including market segmentation, document clustering, image segmentation and image compression. </p>
+
+  <h1>k-means task problem statement:</h1>
+
+    <p>Implement a function cluster_customers() which will find best index of customers cluster based on historical balance account data. A number of metrics will be printed to compare results with old cluster assignment. Main package used: sklearn.cluster.KMeans</p>
+
+    <p>data_test.csv and data_train.csv have the following columns: <em>account_1, account_2, account_3, account_4, account_5, account_6, account_7, account_8, account_9, account_10, account_11, account_12, cluster</em>
+    <br> Example: 
+    397,1436,437,2128,981,710,669,2034,1239,1085,303,1305,2</p>
+
+
+  <p>Clustering metrics: {{ some_string }}></p>
+  <p>Application: Organize customers according to spending behavior for more targeted marketing.</p>
+
+{% endblock %}

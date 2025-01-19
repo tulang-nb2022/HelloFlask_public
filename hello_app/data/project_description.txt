@@ -1,0 +1,10 @@
+Kmeans task
+
+Problem statement:
+Implement a function cluster_customers() which will find best number of customers cluster based on historical balance account data. A number of metrics will be printed to compare results with old cluster assignment.
+
+
+data_test.csv and data_train.csv have columns:
+account_1,account_2,account_3,account_4,account_5,account_6,account_7,account_8,account_9,account_10,account_11,account_12,cluster
+Example: 
+397,1436,437,2128,981,710,669,2034,1239,1085,303,1305,2

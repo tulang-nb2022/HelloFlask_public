@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h1>{% block title %}Resume{% endblock %}</h1>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+{% endblock %}
+
+{% block content %}
+<p>J is a data engineer and software developer with specialized experience in master data management and data governance best practices. She has over five years of experience using SQL and Python for data mining, extracting master attributes, and performing general big data quality control, mostly in the eCommerce space. For ETL, J mostly relies on Spark SQL and AWS Cloud Services to build reliable and seamless workflows. She is also a Verified Expert in Engineering with Toptal since November 20, 2022 and works in a flexible time zone.</p>
+<h2>Work Experience</h2>
+<ul>
+  <li> <b>Freelance ETL Developer</b> (2023 - 2025) TopTal
+    <ul>
+      <li>Helped execute lift-and-shift of on-prem data migration and transformation jobs to AWS Glue to achieve major cost savings.</li>
+      <li>Designed and developed feature enhancements and user stories via stored procedures and python orchestration scripts as executed in AWS Glue while supporting active client migrations with hot fixes and custom client data change requests, even reverse engineering inherited scripts as necessary.
+      <li>Defined/refined QA process and managed prod release process.</li>
+      <li>Served as one of the solution architects for overall data migration orchestration task realized through AWS workflow automation plan (incorporating multiple AWS services, e.g. Aurora, AppFlow, Glue, Lambda, Step Functions, and CodeBuild) to integrate third party APIs and execute main ETL job in under 1 hour (previously multiple weeks). </li>
+      <li>Technologies: AWS Glue, MS SQL/T-SQL, Python 3, PySpark, AWS CodeBuild, AWS Lambda, AWS EC2, BitBucket, Jira, Data Engineering, Data Warehouse Design </li>
+    </ul>
+  </li>
+  <li> <b>Head of Master Data Management</b> (2017 - 2022) Early Data
+    <ul>
+      <li>Helped manage the transfer of inherited Talend master data management workflows to modern technologies such as Python, Spark SQL, and AWS, mapping a further 20% of product master brands. </li>
+      <li>Applied text and image classification neural nets to significantly increase the accuracy of master data management attribute tagging by over 90% accuracy, beyond what was feasible by simple regex patterns.</li>
+      <li>Developed an overarching master data management program to improve downstream business intelligence efforts.</li>
+      <li>Restructured the team and improved overall work culture, increasing team productivity by 50%.</li>
+      <li>Refined the product name clustering and SKU identification with sklearn's linear kernel module and proactively arranged human resources to support master data management SKU tagging workflow, reducing the corresponding workload by 80%.</li>
+      <li>Developed automated Spark QC scripts, reducing the workload of quality control workflow by 40%.</li>
+      <li>Managed a data management platform testing document sign-off, conducting software unit testing, user acceptance testing, and operational qualification protocol for a Fortune 500 medical device company.</li>
+      <li>Maintained an ELT solution spanning Microsoft Server, SSIS, and stored procedures for a Fortune 500 personal care company.</li>
+      <li>Technologies: Python 3, SQL, Git, Amazon Web Services (AWS), Linux, PyTorch, Pandas, TensorFlow, Talend, Spark SQL, SQL Server Integration Services (SSIS), ETL, Data Mining, Data Engineering, Machine Learning, IT Project Management, People Management, Data Warehouse Design, eCommerce, Master Data Management (MDM), Business Intelligence (BI)</li>
+    </ul>
+  </li>
+  <li>
+    <b>Researcher</b> (2011 - 2015) Harvard University
+    <ul>
+      <li>Collected tree crown property data for 235 trees to establish the relationship between functional properties and demographic rates to determine climate change impact on carbon sequestration rates (Bukit Timah Nature Reserve, Singapore).
+      </li>
+      <li>Constructed capacitance curves for 100 leaves and projected how climate change will alter forest structure (Pasoh Forest Reserve, Malaysia). Presented results of the study at the 9th Annual Harvard Plant Biology Symposium.</li>
+      <li>Technologies: Statistics, Field Research</li>
+    </ul>
+  </li>
+</ul>
+<h2>Experience</h2>
+<ul>
+  <li>Master Data Management Project | A Text and Image Classifier Duo for Intelligent Category Mapping
+    <p>Much of the data directly crawled from the major Chinese eCommerce platforms have dirty business-relevant master attributes such as category or brand. Because these are the primary segments clients rely on to conduct effective business intelligence, these master attributes must be intelligently mined and standardized to allow effective downstream analyses and reap the benefits of proper Master Data Management. </p>
+    <p>We found that relying on regex patterns to tag crawled products to the nutritional health category was not accurate, so I collaborated with a data science colleague to deploy text classification in the form of MXNet's Transformer model to perform more intelligent product name tagging.</p>
+    <p>To further improve the accuracy of category mapping, I managed the further implementation of fast.ai and PyTorch's VGG-16 image classifier to utilize product images as well, as sometimes the product name sounded like a nutritional health item, but the image would indicate otherwise. Consolidating the two results as an enriched tagging workflow increased our average accuracy of category mapping to 93.5% and passed the client quality requirement to publish to the production environment and launch the final digital product.</p>
+    <li>ETL Project | Transfer of Talend ETL Workflows to Spark SQL/AWS
+      <p>Originally our ETL data pipelines of millions of rows of crawled eCommerce product and category-level data were written as Talend jobs, but given the instability of the weekly loads, I was tasked to transfer all of the ETL logic to another technology. After deliberate review, I decided Spark SQL was the best choice, given the large amount of data and the relative ease those pipelines could be run on AWS. Other teams were increasingly reliant on AWS' superior technology, which greatly reduced the learning curve in such an endeavor. Finally, I was also skilled in SQL and its flexible functionality, which made Spark SQL an even more logical choice.</p>
+    <p>
+      After painstakingly reviewing the logic, documenting the logic, and monitoring topline statistics of the existing load, I slowly rewrote all nine workflows and made sure to compare my test load with the production load to make sure none of the columns were missing any crucial logic. After several months, the last workflow was written, and I rounded out the endeavor by packaging the scripts to s3 with a slew of shell scripts that allowed the entire ETL workflow to run on Amazon EMR. Not only did the new workflow run more stably, it also ran approximately 40% faster and was easier to QC.</p></li>
+      
+      <li>Master Data Management Project
+        <p>Optimizing Master Brand Mapping in Spark SQL
+        Due to a rehaul of the existing infrastructure from optimization roadblocks, I was tasked with transferring Talend logic of mapping crawled eCommerce data to master brands to another technology. Because I had previous experience with Spark SQL and realized its great data mining capacity given its distributed nature, I started documenting the existing logic by poring through the Talend workflows with the intention of using Spark SQL for the final code.</p>
+        
+        The biggest challenge by far was utilizing the existing keyword look-up table used to do keyword mapping, as merging the look-up tables effectively as a cross-join with no way to partition efficiently greatly reduced the distributed computing potential of Spark SQL. After days of fervent research, I came across the concept of using another column to force certain partitions to travel together so that they were processed together, thereby allowing Spark's distributed power to take over as expected. From this experience, I gained not only more confidence in my Spark code, but also as a developer holistically.</li>
+</ul>
+<h2>Education</h2>
+<ul>
+  <li> <b>Master's Degree in Organismic and Evolutionary Biology</b> (2011-2015) Harvard University - Cambridge, MA, USA</li>
+  <li> <b>Bachelor's Degree in Ecology, Behavior, and Evolution</b> (2008-2011) University of California, Los Angeles - Los Angeles, CA, USA</li>
+</ul>
+<h2>Certifications</h2>
+<ul>
+  <li>Google Cybersecurity (Present) Google</li>
+  <li>AWS Certified Cloud Practitioner (March 2023 - February 2026) Amazon Web Services</li>
+</ul>
+<h2>Skills</h2>
+<ul>
+  <li>Technical: T-/SQL, Python, AWS (EMR, Glue, CodeBuild), Talend, Linux, Git</li>
+  <li>Conceptual: ETL, Data Engineering, Business Intelligence (BI), Master Data Management</li>
+  <li>Languages: English (native), Chinese (business)</li>
+</ul>
+
+  <a href="{{ url_for('index') }}">Back to Home</a>
+{% endblock %}
